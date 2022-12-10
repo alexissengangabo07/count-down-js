@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="code.js"></script>
+    <title>Pomodoro</title>
+</head>
+<body>
+
+    <main class="main">
+        
+        <div class="pomos" >
+            <button class="pomos_P pomo1">Pomodoro</button>
+            <button class="pomos_Rest ">Descanso</button>
+            <button class="pomos_RestLong">Descanso largo</button>
+        </div>
+
+
+        <section class="pomodoro pomo1 start active">
+            <div class="pomo_time">
+                <span class="pomo_min">25</span>
+                <span class="pomo_sec">00</span>
+            </div>
+            <div class="pomo_btns">
+                <button class="inicio">Comenzar</button>
+                <button class="parar disable">Parar</button>
+            </div>
+        </section>
+       
+
+        <section class="pomodoro pomo2 rest  ">
+            <div class="pomo_time">
+                <span class="pomo_min">5</span>
+                <span class="pomo_sec">00</span>
+            </div>
+            <div class="pomo_btns">
+                <button class="inicio">Comenzar</button>
+                <button class="parar disable">Parar</button>
+            </div>
+        </section>
+       
+
+        <section class="pomodoro pomo3 restLong ">
+            <div class="pomo_time">
+                <span class="pomo_min">15</span>
+                <span class="pomo_sec">00</span>
+            </div>
+            <div class="pomo_btns">
+                <button class="inicio">Comenzar</button>
+                <button class="parar disable">Parar</button>
+            </div>
+        </section>
+
+        <section class="status">
+            <div class="status_bar">
+                <span class="porcent">
+                    0%
+                </span>
+                <div class="progres"></div> 
+            </div>
+            <p class="status_msg">Completado</p>
+        </section>
+    </main>
+
+
+
+
+</body>
+</html>
