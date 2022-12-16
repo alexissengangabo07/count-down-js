@@ -1,48 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap");
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-
-  box-sizing: border-box;
-}
-
 body {
   height: 100vh;
   padding: 35px;
-
   background-image: url('../assets/images/cloud-sky.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: #131313;
   font-family: "Montserrat", sans-serif;
+  overflow-y: hidden;
 }
-h1 {
-  margin: 15px 0;
-  font-weight: 900;
-  font-size: 28px;
-  text-align: center;
+
+main {
+  margin-top: 80px;
+  background-color: rgba(255, 255, 255, 0.411);
+  width: 500px;
+  padding: 100px 0 40px 0;
+  border-radius: 8px;
+  margin-left: 500px;
 }
-input {
-  transition: 0.5s ease-in-out;
-  margin: 10px 0;
-  font-size: 18px;
-  padding: 5px;
-  background: rgba(0, 0, 0, 0.11);
-  border: none;
-}
+
 .btn-group {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   height: 10%;
   margin: 35px 0;
 }
+
 button {
-    cursor: pointer;
+  cursor: pointer;
   margin: 5px;
   padding: 10px;
   border: none;
@@ -52,23 +39,57 @@ button {
 
 .start {
   background: rgb(48, 33, 253);
-  color: white;
+  color: rgb(1, 1, 97);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
 }
+
+.start:hover {
+  background: rgb(27, 15, 188);
+}
+
 .break {
   background: rgb(0, 199, 116);
   color: #000000;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
 }
+
 .reset {
-  background: rgb(250, 69, 109);
-  color: #000000;
+  background: rgb(229, 143, 162);
+  color: rgb(1, 1, 97);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
 }
+
+.reset:hover {
+  background-color: rgb(239, 85, 110);
+}
+
 .pause {
   background: rgb(253, 143, 17);
+  color: rgb(1, 1, 97);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  transition: all 1s ease;
 }
+
+.pause:hover {
+  background: rgb(188, 103, 5);
+}
+
 .resume {
   background: rgb(131, 10, 252);
   color: white;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
 }
+
 .clock {
   padding: 3px;
   display: flex;
@@ -78,7 +99,9 @@ button {
   font-weight: bold;
   height: 30%;
   font-size: 24px;
+  margin-bottom: 80px;
 }
+
 .progress-ring {
   position: absolute;
   top: 50%;
@@ -90,7 +113,6 @@ button {
   transition: 0.5s;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
-  stroke: rgba(233, 233, 57, 0.631);
 }
 
 .danger {
@@ -99,30 +121,29 @@ button {
 }
 
 @keyframes pulse {
+
   0%,
   100% {
     transform: rotate(-90deg) scale(1);
   }
+
   50% {
     transform: rotate(-90deg) scale(1.05);
   }
+
   75% {
     transform: rotate(-90deg) scale(0.8);
   }
 }
 
 @media screen and (min-width: 768px) {
-  .btn-group {
-    grid-area: btns;
-    justify-content: center;
-  }
   .clock {
     grid-area: clock;
     height: 100%;
   }
+
   h1 {
     grid-area: head;
-
     align-self: center;
   }
 }

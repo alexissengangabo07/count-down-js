@@ -6,27 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro Timer</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <main>
-
         <section class="clock">
             <div class="mins">0</div>
-            <div>:</div>
+            <span>:</span>
             <div class="secs">00</div>
             <audio src="http://soundbible.com/mp3/service-bell_daniel_simion.mp3"></audio>
             <svg class="progress-ring" height="120" width="120">
-                <circle class="progress-ring__circle" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" />
+                <circle class="progress-ring__circle" stroke="rgba(233, 233, 57, 0.631)" stroke-width="12"
+                    fill="transparent" r="50" cx="60" cy="60" />
             </svg>
         </section>
 
-        <div class="btn-group">
+        <section class="btn-group">
             <button class="start"><i class="fa fa-play"></i></button>
-            <button class="reset"><i class="fa fa-stop"></i></button>
             <button class="pause"><i class="fa fa-pause"></i></button>
-        </div>
+            <button class="reset"><i class="fa fa-stop"></i></button>
+        </section>
     </main>
     <script src="./js/timer.js"></script>
     <script src="./js/progress.js"></script>

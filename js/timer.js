@@ -42,6 +42,7 @@ function decremenT() {
 
   if (seconds > 0) {
     perc = Math.ceil(((totalsecs - seconds) / totalsecs) * 100);
+    // console.log(radius)
     setProgress(perc);
     seconds--;
     initial = window.setTimeout("decremenT()", 1000);
